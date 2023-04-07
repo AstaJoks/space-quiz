@@ -1,11 +1,16 @@
 """
+Import required modules
 Imports to use gspread for tracking users names and scores
+Import os for clearing screen to help with user experience
 Import time to add pauses at certain points during the quiz
 """
-
+import os
+import time
+import colorama
+from colorama import Fore, Style
+colorama.init(autoreset=True)
 import gspread
 from google.oauth2.service_account import Credentials
-import time
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -23,7 +28,6 @@ SHEET = GSPREAD_CLIENT.open('space_quiz')
 
 NAME = ""
 SCORE = 0
-
 
 """
 Dictionary of quiz questions for space quiz
@@ -82,3 +86,37 @@ quiz_data = [
                  "c": "Johannes Kepler"},
      "correct_answer": "b"},
 ]
+
+def quiz_intro():
+    """
+    Starting point of quiz, displays ASCII title text and space image. Gets
+    user name, shows instructions and asks user if they are ready to begin.
+    """
+
+    print(f"""{Fore.YELLOW}{Style.BRIGHT}
+   _____                          ____        _     
+  / ____|                        / __ \      (_)    
+ | (___  _ __   __ _  ___ ___   | |  | |_   _ _ ____
+  \___ \| '_ \ / _` |/ __/ _ \  | |  | | | | | |_  /
+  ____) | |_) | (_| | (_|  __/  | |__| | |_| | |/ / 
+ |_____/| .__/ \__,_|\___\___|   \___\_\\__,_|_/___|
+        | |                                         
+        |_|                                           
+""")
+    print(f"""{Fore.BLUE}{Style.BRIGHT}
+        ~+
+
+                 *       +
+           '                  |
+       ()    .-.,="``"=.    - o -
+             '=/_       \     |
+          *   |  '=._    |
+               \     `=./`,        '
+            .   '=.__.=' `='      *
+   +                         +
+        O      *        '       .
+
+    \n""")
+
+
+quiz_intro()
