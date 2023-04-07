@@ -118,5 +118,41 @@ def quiz_intro():
 
     \n""")
 
+    print("Would you like to test your knowledge on outer space?")
+    time.sleep(1)
+    global NAME
+    NAME = input("Please type your name and hit the enter key:\n")
+
+    # Relaunches start quiz if no name is entered and user only clicks Enter
+    if NAME == "":
+        print("A name is required to take the quiz")
+        start_quiz()
+    else:
+        print(f"\nWelcome to the Space Quiz {NAME}.\n")
+        time.sleep(1)
+        print("The quiz consists of ten questions to test your knowledge "
+              "about the outer space and solar system.\n")
+        time.sleep(1)
+        print("The questions are in multiple choice format.\n")
+        time.sleep(1)
+        print("Options are a, b or c for all questions.\n")
+        time.sleep(1)
+        print("When prompted, please enter you answer a, b or c and hit the "
+              "enter key.\n")
+        time.sleep(1)
+
+    # Asks user if they'd like to begin the quiz pulling in the name they have\
+    # entered above
+    begin_quiz = input(f"Are you ready to begin, {NAME}? (y/n): ")
+
+    while begin_quiz != "y":
+        begin_quiz = input(f"Please enter 'y' to begin {NAME}, else "
+                           "complete the quiz another time: ")
+
+    if begin_quiz.lower() == "y":
+        print("\nOkay, let's start. Good luck!\n")
+        time.sleep(1)
+        os.system('cls' if os.name == 'nt' else 'clear')
+
 
 quiz_intro()
