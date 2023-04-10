@@ -87,9 +87,10 @@ quiz_data = [
      "correct_answer": "b"},
 ]
 
+
 def quiz_intro():
     """
-    Starting point of quiz, displays ASCII title text and space image. Gets
+    Quiz intro displays ASCII title text and space image. Gets
     user name, shows instructions and asks user if they are ready to begin.
     """
 
@@ -123,10 +124,10 @@ def quiz_intro():
     global NAME
     NAME = input("Please type your name and hit the enter key:\n")
 
-    # Relaunches start quiz if no name is entered and user only clicks Enter
+    # Relaunches quiz intro if no name is entered and user only clicks Enter
     if NAME == "":
-        print("A name is required to take the quiz")
-        start_quiz()
+        print("A name is required to take the quiz!")
+        quiz_intro()
     else:
         print(f"\nWelcome to the Space Quiz {NAME}.\n")
         time.sleep(1)
@@ -141,7 +142,7 @@ def quiz_intro():
               "enter key.\n")
         time.sleep(1)
 
-    # Asks user if they'd like to begin the quiz pulling in the name they have\
+    # Asks user if they'd like to begin the quiz pulling in the name they have
     # entered above
     begin_quiz = input(f"Are you ready to begin, {NAME}? (y/n): ")
 
@@ -155,4 +156,33 @@ def quiz_intro():
         os.system('cls' if os.name == 'nt' else 'clear')
 
 
+# run_quiz function based on project by Leah Fisher
+# https://github.com/cornishcoder1/Food_of_Japan_Quiz
+
+
+def run_quiz(data):
+    """
+    Loops through the questions and answers in the quiz data dictionary
+    """
+    score = 0
+
+    for entry in quiz_data:
+        user_answer = ""
+        correct_answer = entry['correct_answer']
+
+        # this loop repeats the question until the user enters
+        # either a, b or c
+        while user_answer not in ['a', 'b', 'c']:
+            print(f"{entry['question']}\n")
+            # this code prints the 3 options for each question
+            for key, value in entry['answers'].items():
+                print(f"{key}: {value}")
+
+            user_answer = input("answer(a, b or c): \n")
+            user_answer = user_answer.lower()
+        # to check if the user pick the accepted option
+            if user_answer not in entry['answers']:
+                print("Only a, b or c will be accepted as answers!\n")
+
 quiz_intro()
+run_quiz(quiz_data)
