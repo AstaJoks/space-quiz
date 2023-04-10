@@ -1,31 +1,182 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Space Quiz
 
-Welcome AstaJoks,
+Description
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+![Responsice Mockup]()
+Visit the live site [Here]()
 
-## Reminders
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+## Contents
+- [User Experience](#user-experience)
+  - [Site Owner's Goals](#site-owners-goals)
+  - [Users Goals](#users-goals)
+- [Features](#features)
+  - [](#)
+  - [](#)
+  - [](#)
+  - [](#)
+  - [](#)
+  - [](#)
+  - [](#)
+  - [](#)
+- [Design](#design)
+  - [Process Flow](#process-flow)
+  - [Colour Pallete](#colour-pallete)
+- [Technologies](#technologies)
+  - [Language](#language)
+  - [Flowchart](#flowchart)
+- [Testing](testing)
+  - [Functional Testing](#functional-testing)
+  - [Manual Testing](#manual-testing)
+  - [Lighthouse Testing](#lighthouse-testing)
+  - [Validator Testing](#validator-testing)
+  - [Unfixed Bugs](#unfixed-bugs)
+- [Deployment](#deployment)
+- [Credits](#credits)
+  - [Content](#content)
+  - [Resources](#resources)
+- [Acknowledgments](#acknowledgments)
 
-## Creating the Heroku app
+## User Experience
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+  ### Site Owner's Goals
+  - 
+    
+  ### Users Goals
+  - 
+  
+  [🔼 Back to top](#contents)
 
-1. `heroku/python`
-2. `heroku/nodejs`
+## Features 
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+### 
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+  - 
+<p><img src="" width="800px" height="auto"  alt="Nav_bar"></p>
 
-Connect your GitHub repository and deploy as normal.
+### 
 
-## Constraints
+   - 
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+<p><img src="" width="800px" height="auto"  alt=""></p>
 
------
-Happy coding!
+### 
+
+  - 
+
+  <p><img src="" width="300px" height="auto"  alt=""></p>
+
+
+### 
+
+  - 
+<p><img src="" width="800px" height="auto"  alt=""></p>
+
+### 
+
+  - 
+
+<p><img src="" width="800px" height="auto"  alt=""></p>
+
+### 
+
+  - 
+
+<p><img src="" width="800px" height="auto"  alt=""></p>
+
+### 
+
+  - 
+
+<p><img src="" width="800px" height="auto"  alt=""></p>
+
+### 
+
+  - 
+
+<p><img src="" width="800px" height="auto"  alt=""></p>
+
+### Existing Features
+
+  - 
+
+[🔼 Back to top](#contents)
+
+## Design
+
+### Process Flow
+
+- Flowchart to demonstrate the actions that take place while using the app.
+
+<p><img src="" width="700px" height="auto"  alt="Flowchart"></p>
+
+
+### Colour Pallete
+
+  - 
+
+<p><img src="" width="300px" height="auto"  alt="Colour-pallete"></p>
+
+[🔼 Back to top](#contents)
+
+## Technologies
+
+#### Language
+  - Python
+
+#### Flowchart
+  - Flowchart was created using lucidchart from https://www.lucidchart.com/pages/.
+
+[🔼 Back to top](#contents)
+
+## Testing 
+
+### Functional Testing
+
+<table>
+  <tr>
+    <th></th>
+    <th>Test</th>
+    <th>Completed Succsessfully</th>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    </tr>
+</table>

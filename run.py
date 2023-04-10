@@ -183,6 +183,24 @@ def run_quiz(data):
         # to check if the user pick the accepted option
             if user_answer not in entry['answers']:
                 print("Only a, b or c will be accepted as answers!\n")
+    
+        # this code checks if the answer is correct and adds
+        # a point to the score
+        if user_answer == entry['correct_answer']:
+            print(f"That's correct {NAME}! Well done!c\n")
+            score = score + 1
+            print(f"Your score: {score}")
+            print("☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀")
+            time.sleep(2)
+            os.system('cls' if os.name == 'nt' else 'clear')
+        # this code displays the correct answer if the user enters
+        # the wrong answer
+        elif user_answer != entry['correct_answer']:
+            print(f"Sorry {NAME}, that's incorrect.\n")
+            print(f"The correct answer was {correct_answer}.")
+            print("✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴")
+            time.sleep(2)
+            os.system('cls' if os.name == 'nt' else 'clear')
 
 quiz_intro()
 run_quiz(quiz_data)
