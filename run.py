@@ -209,6 +209,20 @@ def run_quiz(data):
     data = NAME, score
     export_results(data)
 
+# Export results based on Love Sandwiches project by
+# Code Institute
+
+
+def export_results(data):
+    """
+    This function will export the results of the quiz including
+    the user name and final score to the scores worksheet
+    """
+    print("Updating scores worksheet...\n")
+    scores_worksheet = SHEET.worksheet("scores")
+    scores_worksheet.append_row(data)
+    print("Results exported to worksheet successfully")
+
 
 quiz_intro()
 run_quiz(quiz_data)
