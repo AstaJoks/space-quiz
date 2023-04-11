@@ -180,14 +180,14 @@ def run_quiz(data):
 
             user_answer = input("answer(a, b or c): \n")
             user_answer = user_answer.lower()
-        # to check if the user pick the accepted option
+            # to check if the user pick the accepted option a, b or c
             if user_answer not in entry['answers']:
                 print("Only a, b or c will be accepted as answers!\n")
-    
+
         # this code checks if the answer is correct and adds
         # a point to the score
         if user_answer == entry['correct_answer']:
-            print(f"That's correct {NAME}! Well done!c\n")
+            print(f"That's correct {NAME}! Well done!\n")
             score = score + 1
             print(f"Your score: {score}")
             print("☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀")
@@ -202,5 +202,10 @@ def run_quiz(data):
             time.sleep(2)
             os.system('cls' if os.name == 'nt' else 'clear')
 
-quiz_intro()
-run_quiz(quiz_data)
+    # the final screen congratulates the user and tells
+    # the final score
+    print(f"Well done for completing the Space Quiz, {NAME}.\n")
+    print(f"Your total score was {score} points.\n")
+    print("I hope you did well and enjoyed the quiz!")
+    data = NAME, score
+    export_results(data)
