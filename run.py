@@ -106,7 +106,6 @@ def quiz_intro():
 """)
     print(f"""{Fore.BLUE}{Style.BRIGHT}
         ~+
-
                  *       +
            '                  |
        ()    .-.,="``"=.    - o -
@@ -116,7 +115,6 @@ def quiz_intro():
             .   '=.__.=' `='      *
    +                         +
         O      *        '       .
-
     \n""")
 
     print("Would you like to test your knowledge on outer space?")
@@ -126,7 +124,7 @@ def quiz_intro():
 
     # Relaunches quiz intro if no name is entered and user only clicks Enter
     if NAME == "":
-        print("A name is required to take the quiz!")
+        print(f"{Fore.RED}A name is required to take the quiz!")
         quiz_intro()
     else:
         print(f"\nWelcome to the Space Quiz {NAME}.\n")
@@ -173,7 +171,8 @@ def run_quiz(data):
         # this loop repeats the question until the user enters
         # either a, b or c
         while user_answer not in ['a', 'b', 'c']:
-            print(f"{entry['question']}\n")
+            print(f"{Fore.YELLOW}{entry['question']}")
+
             # this code prints the 3 options for each question
             for key, value in entry['answers'].items():
                 print(f"{key}: {value}")
@@ -182,12 +181,12 @@ def run_quiz(data):
             user_answer = user_answer.lower()
             # to check if the user pick the accepted option a, b or c
             if user_answer not in entry['answers']:
-                print("Only a, b or c will be accepted as answers!\n")
+                print(f"{Fore.RED}Only a, b or c are valid options!\n")
 
         # this code checks if the answer is correct and adds
         # a point to the score
         if user_answer == entry['correct_answer']:
-            print(f"That's correct {NAME}! Well done!\n")
+            print(f"{Fore.GREEN}That's correct {NAME}! Well done!\n")
             score = score + 1
             print(f"Your score: {score}")
             print("☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀")
@@ -196,7 +195,7 @@ def run_quiz(data):
         # this code displays the correct answer if the user enters
         # the wrong answer
         elif user_answer != entry['correct_answer']:
-            print(f"Sorry {NAME}, that's incorrect.\n")
+            print(f"{Fore.RED}Sorry {NAME}, that's incorrect.\n")
             print(f"The correct answer was {correct_answer}.")
             print("✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴")
             time.sleep(2)
@@ -209,3 +208,7 @@ def run_quiz(data):
     print("I hope you did well and enjoyed the quiz!")
     data = NAME, score
     export_results(data)
+
+
+quiz_intro()
+run_quiz(quiz_data)
