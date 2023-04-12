@@ -1,8 +1,10 @@
 """
 Import required modules
-Imports to use gspread for tracking users names and scores
 Import os for clearing screen to help with user experience
 Import time to add pauses at certain points during the quiz
+Imports to use gspread for tracking users names and scores
+Imports pyfiglet for converting regular text in to different forms of ASCII art
+Imports clorama for adding a colour to the different parts of quiz
 """
 import os
 import time
@@ -10,7 +12,7 @@ import gspread
 from google.oauth2.service_account import Credentials
 import pyfiglet
 import colorama
-from colorama import Fore, Style
+from colorama import Fore
 colorama.init(autoreset=True)
 
 
@@ -92,12 +94,12 @@ quiz_data = [
 
 def quiz_intro():
     """
-    Quiz intro displays ASCII title text and space image. Gets
+    Quiz intro displays ASCII title text. Gets
     user name, shows instructions and asks user if they are ready to begin.
     """
 
     ascii_banner = pyfiglet.figlet_format("Space Quiz")
-    print(ascii_banner)
+    print(Fore.BLUE + ascii_banner)
 
     print("Would you like to test your knowledge on outer space?")
     time.sleep(1)
@@ -153,7 +155,7 @@ def run_quiz(data):
         # this loop repeats the question until the user enters
         # either a, b or c
         while user_answer not in ['a', 'b', 'c']:
-            print(f"{Fore.YELLOW}{entry['question']}")
+            print(f"{Fore.BLUE}{entry['question']}")
 
             # this code prints the 3 options for each question
             for key, value in entry['answers'].items():
