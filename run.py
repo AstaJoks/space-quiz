@@ -6,11 +6,13 @@ Import time to add pauses at certain points during the quiz
 """
 import os
 import time
+import gspread
+from google.oauth2.service_account import Credentials
+import pyfiglet
 import colorama
 from colorama import Fore, Style
 colorama.init(autoreset=True)
-import gspread
-from google.oauth2.service_account import Credentials
+
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -94,28 +96,8 @@ def quiz_intro():
     user name, shows instructions and asks user if they are ready to begin.
     """
 
-    print(f"""{Fore.YELLOW}{Style.BRIGHT}
-   _____                          ____        _     
-  / ____|                        / __ \      (_)    
- | (___  _ __   __ _  ___ ___   | |  | |_   _ _ ____
-  \___ \| '_ \ / _` |/ __/ _ \  | |  | | | | | |_  /
-  ____) | |_) | (_| | (_|  __/  | |__| | |_| | |/ / 
- |_____/| .__/ \__,_|\___\___|   \___\_\\__,_|_/___|
-        | |                                         
-        |_|                                           
-""")
-    print(f"""{Fore.BLUE}{Style.BRIGHT}
-        ~+
-                 *       +
-           '                  |
-       ()    .-.,="``"=.    - o -
-             '=/_       \     |
-          *   |  '=._    |
-               \     `=./`,        '
-            .   '=.__.=' `='      *
-   +                         +
-        O      *        '       .
-    \n""")
+    ascii_banner = pyfiglet.figlet_format("Space Quiz")
+    print(ascii_banner)
 
     print("Would you like to test your knowledge on outer space?")
     time.sleep(1)
@@ -204,8 +186,8 @@ def run_quiz(data):
     # the final screen congratulates the user and tells
     # the final score
     print(f"Well done for completing the Space Quiz, {NAME}.\n")
-    print(f"Your total score was {score} points.\n")
-    print("I hope you did well and enjoyed the quiz!")
+    print(f"Your total score was {score} points out of 10.\n")
+    print("I hope you enjoyed the quiz!")
     data = NAME, score
     export_results(data)
 
