@@ -89,6 +89,58 @@ quiz_data = [
                  "b": "Hans Lippershey",
                  "c": "Johannes Kepler"},
      "correct_answer": "b"},
+    {"question": "11. How old is the sun?",
+     "answers": {"a": "Roughly 4.6 billion years old",
+                 "b": "Roughly 1 billion years old",
+                 "c": "Roughly 9 billion years old"},
+     "correct_answer": "a"},
+    {"question": "12. What color is the sun?",
+     "answers": {"a": "A mixture of all colors",
+                 "b": "Bright yellow",
+                 "c": "A mixture of all colors"},
+     "correct_answer": "c"},
+    {"question": "13. What color is Mars sunset?",
+     "answers": {"a": "Red",
+                 "b": "Yellow",
+                 "c": "Blue"},
+     "correct_answer": "c"},
+    {"question": "14. Which planet has the most moons?",
+     "answers": {"a": "Earth",
+                 "b": "Saturn",
+                 "c": "Mars"},
+     "correct_answer": "b"},
+    {"question": "15. Which planet is known as the Morning Star?",
+     "answers": {"a": "The Sun",
+                 "b": "Earth",
+                 "c": "Venus"},
+     "correct_answer": "c"},
+    {"question": "16. How much of the universe is composed of dark matter?",
+     "answers": {"a": "27 percent",
+                 "b": "80 percent",
+                 "c": "2 percent"},
+     "correct_answer": "b"},
+    {"question": "17. Where can you go to see projections of the night sky?",
+     "answers": {"a": "A Museum",
+                 "b": "An Aquarium",
+                 "c": "A planetarium"},
+     "correct_answer": "c"},
+    {"question": "18. What are the storms produced by the sun called?",
+     "answers": {"a": "Solar storms",
+                 "b": "Sun storms",
+                 "c": "Cosmic storms"},
+     "correct_answer": "b"},
+    {"question": "19. What is the study of the stars, planets, and galaxies?",
+     "answers": {"a": "Geography",
+                 "b": "Astronomy",
+                 "c": "Galaxology"},
+     "correct_answer": "b"},
+    {"question": "20. How long does a solar eclipse last?",
+     "answers": {"a": "About seven and a half minutes",
+                 "b": "About three miutes",
+                 "c": "About 5 minutes"},
+     "correct_answer": "a"},
+
+
 ]
 
 
@@ -101,10 +153,10 @@ def quiz_intro():
     ascii_banner = pyfiglet.figlet_format("Space Quiz")
     print(Fore.BLUE + ascii_banner)
 
-    print("Would you like to test your knowledge on outer space?")
+    print("WOULD YOU LIKE TO TEST YOUR KNOWLEDGE ABOUT THE OUTER SPACE?")
     time.sleep(1)
     global NAME
-    NAME = input("Please type your name and hit the enter key:\n")
+    NAME = input("Please type your name and hit the enter key to start:\n")
 
     # Relaunches quiz intro if no name is entered and user only clicks Enter
     if NAME == "":
