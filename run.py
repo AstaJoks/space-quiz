@@ -95,7 +95,7 @@ quiz_data = [
                  "c": "Roughly 9 billion years old"},
      "correct_answer": "a"},
     {"question": "12. What color is the sun?",
-     "answers": {"a": "A mixture of all colors",
+     "answers": {"a": "White",
                  "b": "Bright yellow",
                  "c": "A mixture of all colors"},
      "correct_answer": "c"},
@@ -118,7 +118,7 @@ quiz_data = [
      "answers": {"a": "27 percent",
                  "b": "80 percent",
                  "c": "2 percent"},
-     "correct_answer": "b"},
+     "correct_answer": "a"},
     {"question": "17. Where can you go to see projections of the night sky?",
      "answers": {"a": "A Museum",
                  "b": "An Aquarium",
@@ -128,7 +128,7 @@ quiz_data = [
      "answers": {"a": "Solar storms",
                  "b": "Sun storms",
                  "c": "Cosmic storms"},
-     "correct_answer": "b"},
+     "correct_answer": "a"},
     {"question": "19. What is the study of the stars, planets, and galaxies?",
      "answers": {"a": "Geography",
                  "b": "Astronomy",
@@ -139,7 +139,6 @@ quiz_data = [
                  "b": "About three miutes",
                  "c": "About 5 minutes"},
      "correct_answer": "a"},
-
 
 ]
 
