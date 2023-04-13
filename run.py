@@ -30,6 +30,10 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('space_quiz')
 
+high_scores = SHEET.worksheet("scores")
+
+scores = high_scores.get_all_values()
+
 NAME = ""
 SCORE = 0
 
@@ -257,6 +261,19 @@ def export_results(data):
     scores_worksheet = SHEET.worksheet("scores")
     scores_worksheet.append_row(data)
     print("Results exported to worksheet successfully")
+
+
+game_high_scores = [
+
+ # high scores
+ """
+    =================================================
+                H I G H   S C O R E S
+    =================================================
+    \tPOS\tNAME\tSCORE\t
+    =================================================
+"""
+]
 
 
 quiz_intro()
