@@ -185,17 +185,21 @@ def export_results(data):
     scores_worksheet = SHEET.worksheet("scores")
     scores_worksheet.append_row(data)
     print("Results exported to worksheet successfully")
+    time.sleep(1)
+    print("Showing the HIGH SCORES...")
+    time.sleep(1.5)
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 
 game_high_scores = [
 
  # High scores table display
  """
-    =================================================
+    =====✴=====✴=====✴=====✴=====✴=====✴=====✴=====
                 H I G H   S C O R E S
-    =================================================
+    ===============================================
     \tPOS\tNAME\tSCORE\t
-    =================================================
+    ===============================================
 """
 ]
 
@@ -210,7 +214,7 @@ def display_high_scores():
 
     update_data = sorted(score_sheet, key=lambda x: int(x[1]), reverse=True)
 
-    print(f"{Fore.YELLOW}{game_high_scores[0]}")
+    print(f"{Fore.BLUE}{game_high_scores[0]}")
     if len(update_data) < 5:
         count = len(update_data)
     else:
@@ -218,9 +222,9 @@ def display_high_scores():
 
     for i in range(0, count):
         print(f"""
-        {Fore.GREEN}{i+1}\t{update_data[i][0]}\t  {update_data[i][1]}""")
+        {i+1}\t{update_data[i][0]}\t  {update_data[i][1]}""")
     print(f"""{Fore.BLUE}\n
-    =================================================""")
+    =====✴=====✴=====✴=====✴=====✴=====✴=====✴=====""")
 
 
 quiz_intro()
