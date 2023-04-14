@@ -31,7 +31,6 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('space_quiz')
 
 high_scores = SHEET.worksheet("scores")
-
 scores = high_scores.get_all_values()
 
 NAME = ""
@@ -68,81 +67,6 @@ quiz_data = [
                  "b": "The Moon",
                  "c": "The Sun"},
      "correct_answer": "c"},
-    {"question": "6. Which planet has a day which lasts eight months?",
-     "answers": {"a": "Mars",
-                 "b": "Venus",
-                 "c": "Earth"},
-     "correct_answer": "b"},
-    {"question": "7. How many planets are there in the solar system?",
-     "answers": {"a": "Nine",
-                 "b": "Seven",
-                 "c": "Ten"},
-     "correct_answer": "a"},
-    {"question": "8. How long is one year on Jupiter?",
-     "answers": {"a": "3 Earth years",
-                 "b": "8 Earth years",
-                 "c": "12 Earth years"},
-     "correct_answer": "b"},
-    {"question": "9. How many moons does Earth have?",
-     "answers": {"a": "Just One",
-                 "b": "Two",
-                 "c": "None"},
-     "correct_answer": "a"},
-    {"question": "10. Who invented the telescope?",
-     "answers": {"a": "Galileo",
-                 "b": "Hans Lippershey",
-                 "c": "Johannes Kepler"},
-     "correct_answer": "b"},
-    {"question": "11. How old is the sun?",
-     "answers": {"a": "Roughly 4.6 billion years old",
-                 "b": "Roughly 1 billion years old",
-                 "c": "Roughly 9 billion years old"},
-     "correct_answer": "a"},
-    {"question": "12. What color is the sun?",
-     "answers": {"a": "White",
-                 "b": "Bright yellow",
-                 "c": "A mixture of all colors"},
-     "correct_answer": "c"},
-    {"question": "13. What color is Mars sunset?",
-     "answers": {"a": "Red",
-                 "b": "Yellow",
-                 "c": "Blue"},
-     "correct_answer": "c"},
-    {"question": "14. Which planet has the most moons?",
-     "answers": {"a": "Earth",
-                 "b": "Saturn",
-                 "c": "Mars"},
-     "correct_answer": "b"},
-    {"question": "15. Which planet is known as the Morning Star?",
-     "answers": {"a": "The Sun",
-                 "b": "Earth",
-                 "c": "Venus"},
-     "correct_answer": "c"},
-    {"question": "16. How much of the universe is composed of dark matter?",
-     "answers": {"a": "27 percent",
-                 "b": "80 percent",
-                 "c": "2 percent"},
-     "correct_answer": "a"},
-    {"question": "17. Where can you go to see projections of the night sky?",
-     "answers": {"a": "A Museum",
-                 "b": "An Aquarium",
-                 "c": "A planetarium"},
-     "correct_answer": "c"},
-    {"question": "18. What are the storms produced by the sun called?",
-     "answers": {"a": "Solar storms",
-                 "b": "Sun storms",
-                 "c": "Cosmic storms"},
-     "correct_answer": "a"},
-    {"question": "19. What is the study of the stars, planets, and galaxies?",
-     "answers": {"a": "Geography",
-                 "b": "Astronomy",
-                 "c": "Galaxology"},
-     "correct_answer": "b"},
-    {"question": "20. How long does a solar eclipse last?",
-     "answers": {"a": "About seven and a half minutes",
-                 "b": "About three miutes",
-                 "c": "About 5 minutes"},
-     "correct_answer": "a"},
 
 ]
 
@@ -265,7 +189,7 @@ def export_results(data):
 
 game_high_scores = [
 
- # high scores
+ # High scores table display
  """
     =================================================
                 H I G H   S C O R E S
@@ -276,5 +200,29 @@ game_high_scores = [
 ]
 
 
+def display_high_scores():
+    """
+    Displays to the players the 5 best scores
+    """
+    score_sheet = SHEET.worksheet("scores").get_all_values()[1:]
+    for data in score_sheet:
+        data[1] = data[1]
+
+    update_data = sorted(score_sheet, key=lambda x: int(x[1]), reverse=True)
+
+    print(f"{Fore.YELLOW}{game_high_scores[0]}")
+    if len(update_data) < 5:
+        count = len(update_data)
+    else:
+        count = 5
+
+    for i in range(0, count):
+        print(f"""
+        {Fore.GREEN}{i+1}\t{update_data[i][0]}\t  {update_data[i][1]}""")
+    print(f"""{Fore.BLUE}\n
+    =================================================""")
+
+
 quiz_intro()
 run_quiz(quiz_data)
+display_high_scores()
