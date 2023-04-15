@@ -212,8 +212,8 @@ def run_quiz(data):
         newquestion = math.floor(random.random()*len(quiz_data))
         while newquestion in questions_numbers:
             newquestion = math.floor(random.random()*len(quiz_data))
-    questions_numbers.append(newquestion)
-    questions_toshow.append(quiz_data[newquestion])
+        questions_numbers.append(newquestion)
+        questions_toshow.append(quiz_data[newquestion])
 
     for entry in questions_toshow:
         user_answer = ""
