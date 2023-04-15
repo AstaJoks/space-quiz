@@ -108,11 +108,11 @@ def quiz_intro():
     begin_quiz = input(f"Are you ready to begin, {NAME}? (y/n): ")
 
     while begin_quiz != "y":
-        begin_quiz = input(f"Please enter 'y' to begin {NAME}, else "
+        begin_quiz = input(f"{Fore.RED}Please enter 'y' to begin {NAME}, else "
                            "complete the quiz another time: ")
 
     if begin_quiz.lower() == "y":
-        print("\nOkay, let's start. Good luck!\n")
+        print(f"{Fore.WHITE}\nOkay, let's start. Good luck!\n")
         time.sleep(1)
         os.system('cls' if os.name == 'nt' else 'clear')
 
@@ -168,7 +168,7 @@ def run_quiz(data):
     # the final score
     print(f"Well done for completing the Space Quiz, {NAME}.\n")
     print(f"Your total score was {score} points out of 10.\n")
-    print("I hope you enjoyed the quiz!")
+    print("Hope you had fun!")
     data = NAME, score
     export_results(data)
 
@@ -181,13 +181,14 @@ def export_results(data):
     This function will export the results of the quiz including
     the user name and final score to the scores worksheet
     """
-    print("Updating scores worksheet...\n")
+    print("Updating results worksheet...\n")
     scores_worksheet = SHEET.worksheet("scores")
     scores_worksheet.append_row(data)
     print("Results exported to worksheet successfully")
     time.sleep(1)
+    
     print("Showing the HIGH SCORES...")
-    time.sleep(1.5)
+    time.sleep(1)
     os.system('cls' if os.name == 'nt' else 'clear')
 
 
@@ -227,6 +228,28 @@ def display_high_scores():
     =====✴=====✴=====✴=====✴=====✴=====✴=====✴=====""")
 
 
-quiz_intro()
-run_quiz(quiz_data)
-display_high_scores()
+def try_again():
+    """
+    At the end of the quiz, proposes to try again.
+    """
+    restart = input("Would you like to try again and beat your score? (Y/N\n")
+    if restart.upper() == "Y":
+        main()
+    if restart.upper() == "N":
+        print("Thank you for taking a quiz. Hope to see you again soon.\n")
+    else:
+        print(f"{Fore.RED}I did not understand.")
+        restart = input(f"{Fore.RED}Would you like to try again? (Y/N")
+
+
+def main():
+    """
+    Run all program functions
+    """
+    quiz_intro()
+    run_quiz(quiz_data)
+    display_high_scores()
+    try_again()
+
+
+main()
