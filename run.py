@@ -224,17 +224,16 @@ def run_quiz(data):
         # a point to the score
         if user_answer == entry['correct_answer']:
             print(f"{Fore.GREEN}That's correct {NAME}! Well done!\n")
-            print(f"Your score: {score}")
-            print("🥳 🥳 🥳 🥳 🥳 🥳 🥳 🥳 🥳 🥳 🥳 🥳 🥳")
+            print("🥳 🥳 🥳 🥳 🥳 🥳 🥳 🥳 🥳 🥳 🥳")
             score = score + 1
+            print(f"Your score: {score}")
             time.sleep(2)
             os.system('cls' if os.name == 'nt' else 'clear')
-
         # this code displays the correct answer if the user enters
         # the wrong answer
         elif user_answer != entry['correct_answer']:
             print(f"{Fore.RED}Sorry {NAME}, that's incorrect.\n")
-            print("😭 😭 😭 😭 😭 😭 😭 😭 😭 😭 😭 😭 😭")
+            print("😕 😕 😕 😕 😕 😕 😕 😕 😕 😕 😕")
             print(f"The correct answer was {correct_answer}.")
             time.sleep(2)
             os.system('cls' if os.name == 'nt' else 'clear')
@@ -312,7 +311,7 @@ def try_again():
     if restart.upper() == "Y":
         os.system('cls' if os.name == 'nt' else 'clear')
         print("Okay, let's try again! Good luck!")
-        time.sleep(1)
+        time.sleep(1.5)
         os.system('cls' if os.name == 'nt' else 'clear')
         run_quiz(quiz_data)
     if restart.upper() == "N":
