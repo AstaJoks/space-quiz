@@ -8,6 +8,8 @@ Imports clorama for adding a colour to the different parts of quiz
 """
 import os
 import time
+import random
+import math
 import gspread
 from google.oauth2.service_account import Credentials
 import pyfiglet
@@ -197,11 +199,23 @@ def quiz_intro():
 
 def run_quiz(data):
     """
-    Loops through the questions and answers in the quiz data dictionary
+    Creates a custom object with 10 questions randomly selected from the data
+    and loops through the questions and answers in the quiz data dictionary
     """
     score = 0
+    # Initialize an array that will contain all question numbers
+    questions_numbers = []
+    # Initialize an array that will contain all question objects from data
+    questions_toshow = []
 
-    for entry in quiz_data:
+    for newquestion in range(10):
+        newquestion = math.floor(random.random()*len(quiz_data))
+        while newquestion in questions_numbers:
+            newquestion = math.floor(random.random()*len(quiz_data))
+    questions_numbers.append(newquestion)
+    questions_toshow.append(quiz_data[newquestion])
+
+    for entry in questions_toshow:
         user_answer = ""
         correct_answer = entry['correct_answer']
 
