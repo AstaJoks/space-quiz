@@ -142,7 +142,6 @@ quiz_data = [
                  "b": "About three miutes",
                  "c": "About 5 minutes"},
      "correct_answer": "a"},
-
 ]
 
 
@@ -225,17 +224,18 @@ def run_quiz(data):
         # a point to the score
         if user_answer == entry['correct_answer']:
             print(f"{Fore.GREEN}That's correct {NAME}! Well done!\n")
-            score = score + 1
             print(f"Your score: {score}")
-            print("☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀")
+            print("🥳 🥳 🥳 🥳 🥳 🥳 🥳 🥳 🥳 🥳 🥳 🥳 🥳")
+            score = score + 1
             time.sleep(2)
             os.system('cls' if os.name == 'nt' else 'clear')
+
         # this code displays the correct answer if the user enters
         # the wrong answer
         elif user_answer != entry['correct_answer']:
             print(f"{Fore.RED}Sorry {NAME}, that's incorrect.\n")
+            print("😭 😭 😭 😭 😭 😭 😭 😭 😭 😭 😭 😭 😭")
             print(f"The correct answer was {correct_answer}.")
-            print("✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴")
             time.sleep(2)
             os.system('cls' if os.name == 'nt' else 'clear')
 
@@ -261,7 +261,7 @@ def export_results(data):
     scores_worksheet.append_row(data)
     print("Results exported to worksheet successfully")
     time.sleep(1)
-    
+
     print("Showing the HIGH SCORES...")
     time.sleep(1)
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -310,7 +310,11 @@ def try_again():
 
     restart = input("Would you like to try again and beat your score? (Y/N)\n")
     if restart.upper() == "Y":
-        main()
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print("Okay, let's try again! Good luck!")
+        time.sleep(1)
+        os.system('cls' if os.name == 'nt' else 'clear')
+        run_quiz(quiz_data)
     if restart.upper() == "N":
         print("Thank you for taking a quiz. Hope to see you again soon.\n")
     else:
@@ -318,14 +322,7 @@ def try_again():
         try_again()
 
 
-def main():
-    """
-    Run all program functions
-    """
-    quiz_intro()
-    run_quiz(quiz_data)
-    display_high_scores()
-    try_again()
-
-
-main()
+quiz_intro()
+run_quiz(quiz_data)
+display_high_scores()
+try_again()
