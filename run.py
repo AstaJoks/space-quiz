@@ -232,14 +232,15 @@ def try_again():
     """
     At the end of the quiz, proposes to try again.
     """
-    restart = input("Would you like to try again and beat your score? (Y/N\n")
+
+    restart = input("Would you like to try again and beat your score? (Y/N)\n")
     if restart.upper() == "Y":
         main()
     if restart.upper() == "N":
         print("Thank you for taking a quiz. Hope to see you again soon.\n")
     else:
-        print(f"{Fore.RED}I did not understand.")
-        restart = input(f"{Fore.RED}Would you like to try again? (Y/N")
+        print(f"{Fore.RED}I did not understand. Only Y/N are valid options!")
+        try_again()
 
 
 def main():
