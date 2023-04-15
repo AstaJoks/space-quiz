@@ -279,7 +279,7 @@ def export_results(data):
     time.sleep(1)
 
     print("Showing the HIGH SCORES...")
-    time.sleep(1)
+    time.sleep(2)
     os.system('cls' if os.name == 'nt' else 'clear')
 
 
