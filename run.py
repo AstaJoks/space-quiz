@@ -1,18 +1,21 @@
 """
 Import required modules
-Import os for clearing screen to help with user experience
-Import time to add pauses at certain points during the quiz
-Imports to use gspread for tracking users names and scores
-Imports pyfiglet for converting regular text in to different forms of ASCII art
-Imports clorama for adding a colour to the different parts of quiz
 """
+# Import os for clearing screen to help with user experience
 import os
+# Import time to add pauses at certain points during the quiz
 import time
+# Import random to get the random question from the data dictionary
 import random
+# Import math to get 10 random questions out of 20
 import math
+# Import gspread for tracking users names and scores
 import gspread
 from google.oauth2.service_account import Credentials
+# Import pyfiglet for converting regular text in to different forms
+# of ASCII art
 import pyfiglet
+# Import colorama for adding a colour to the different parts of quiz
 import colorama
 from colorama import Fore
 colorama.init(autoreset=True)
@@ -169,7 +172,7 @@ def quiz_intro():
         print(f"\nWelcome to the Space Quiz {NAME}.\n")
         time.sleep(1)
         print("The quiz consists of ten questions to test your knowledge "
-              "about the outer space and solar system.\n")
+              "about the outer space and the solar system.\n")
         time.sleep(1)
         print("The questions are in multiple choice format.\n")
         time.sleep(1)
@@ -177,7 +180,7 @@ def quiz_intro():
         time.sleep(1)
         print("When prompted, please enter you answer a, b or c and hit the "
               "enter key.\n")
-        time.sleep(1)
+        time.sleep(1.5)
 
     # Asks user if they'd like to begin the quiz pulling in the name they have
     # entered above
@@ -188,8 +191,8 @@ def quiz_intro():
                            "complete the quiz another time: ")
 
     if begin_quiz.lower() == "y":
-        print(f"{Fore.WHITE}\nOkay, let's start. Good luck!\n")
-        time.sleep(1)
+        print(f"{Fore.BLUE}\nOkay, let's start. Good luck!\n")
+        time.sleep(1.5)
         os.system('cls' if os.name == 'nt' else 'clear')
 
 
@@ -238,7 +241,7 @@ def run_quiz(data):
         # a point to the score
         if user_answer == entry['correct_answer']:
             print(f"{Fore.GREEN}That's correct {NAME}! Well done!\n")
-            print("🥳 🥳 🥳 🥳 🥳 🥳 🥳 🥳 🥳 🥳 🥳")
+            print("🥳..🥳..🥳..🥳..🥳..🥳..🥳..🥳..🥳..🥳..🥳")
             score = score + 1
             print(f"Your score: {score}")
             time.sleep(2)
@@ -247,7 +250,7 @@ def run_quiz(data):
         # the wrong answer
         elif user_answer != entry['correct_answer']:
             print(f"{Fore.RED}Sorry {NAME}, that's incorrect.\n")
-            print("😕 😕 😕 😕 😕 😕 😕 😕 😕 😕 😕")
+            print("😕..😕..😕..😕..😕..😕..😕..😕..😕..😕..😕")
             print(f"The correct answer was {correct_answer}.")
             time.sleep(2)
             os.system('cls' if os.name == 'nt' else 'clear')
@@ -282,20 +285,20 @@ def export_results(data):
 
 game_high_scores = [
 
- # High scores table display
+ # High Scores table display
  """
     =====✴=====✴=====✴=====✴=====✴=====✴=====✴=====
                 H I G H   S C O R E S
     ===============================================
     \tPOS\tNAME\tSCORE\t
     ===============================================
-"""
+ """
 ]
 
 
 def display_high_scores():
     """
-    Displays to the players the 5 best scores
+    Displays five highest scores in the High Score table
     """
     score_sheet = SHEET.worksheet("scores").get_all_values()[1:]
     for data in score_sheet:
@@ -318,7 +321,7 @@ def display_high_scores():
 
 def try_again():
     """
-    At the end of the quiz, proposes to try again.
+    At the end of the quiz, proposes to try again
     """
 
     restart = input("Would you like to try again and beat your score? (Y/N)\n")
