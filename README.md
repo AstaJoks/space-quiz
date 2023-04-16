@@ -2,7 +2,7 @@
 
 Description
 
-![Responsice Mockup]()
+![Responsice Mockup](https://res.cloudinary.com/dcydt01ed/image/upload/v1681601846/space_quiz_gehn8l.png)
 Visit the live site [Here](https://space-quiz-pp3.herokuapp.com/)
 
 
@@ -187,27 +187,25 @@ Visit the live site [Here](https://space-quiz-pp3.herokuapp.com/)
 
 ### Lighthouse Testing
 
-- The performance test of all the pages was done with Lighthouse through Google Chrome Developer Tools, both for desktop and mobile devices.
+I generated a lighthouse report to check my performance and the scores are good. The lower score for the SEO is caused by the lack of meta description.
 
-  - Lighthouse test results for Desktop:
-
-<p><img src="" width="1600px" height="auto"  alt=""></p>
-
-  - Lighthouse test results for Mobile:
-
-<p><img src="" width="1600px" height="auto"  alt=""></p>
-
+<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681602070/lighthouse_gny4rb.png" width="400px" height="auto"  alt="Lighthouse"></p>
 
 ### Validator Testing 
 
-  -  [pep8ci](https://pep8ci.herokuapp.com/)
+The [PEP8CI](https://pep8ci.herokuapp.com/) Validator Service was used to validate every Python file in the project to ensure there were no syntax errors in the project.
 
-<p><img src="" width="1600px" height="auto"  alt=""></p>
+<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681602378/pep8ci_ofpeat.png" width="800px" height="auto"  alt=""></p>
+
+- No errors or warnings were found during the last testing of the code in PEP8CI.
 
 
-### Unfixed bugs
+### Bugs
 
-- 
+- Fixed Bug
+
+I was struggling to get the ten random questions from the data dictionary. Only one random question was showing.
+It took me awhile to figure it out that there was an indentation mistake which wasn't shown in pip8ci.
 
 [🔼 Back to top](#contents)
 
@@ -273,7 +271,7 @@ You can clone the repository by following these steps:
 
 ### Content
 
-- [Food of Japan Quiz](https://github.com/cornishcoder1/Food_of_Japan_Quiz) - run quiz function based on project by Leah Fisher.
+- [Food of Japan Quiz](https://github.com/cornishcoder1/Food_of_Japan_Quiz) - quiz intro and run quiz functions based on project by Leah Fisher.
 - [Love Sandwiches ](https://learn.codeinstitute.net/.ie) - exporting results functionality based on Love Sandwiches Walkthrough project by Code Institute.
 
 ### Resources
@@ -281,7 +279,9 @@ You can clone the repository by following these steps:
 - [Code Institute](https://codeinstitute.net/ie/)
 - [Readme](https://readme.so/)
 - [Simple Multiple Choice Quiz Game in Python](https://www.youtube.com/watch?v=mxDeSkuLBeY&t=372s)
-- [System Junk](https://github.com/beratzorlu/python-quiz)
+- [W3Schools - Python](https://www.w3schools.com/python/)
+- [How to clear the console:](https://appdividend.com/2022/06/03/how-to-clear-console-in-python/#:~:text=For%20the%20Windows%20system%2C%20to,('cls'))
+- [How to add Python sleep - for timing the texts:](https://realpython.com/python-sleep/)
 - [Simple quiz plus flowchart Python](https://www.youtube.com/watch?v=LXSvzUimHBk)
 
 
