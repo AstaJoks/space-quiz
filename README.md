@@ -2,14 +2,18 @@
 
 Description
 
+Space Quiz is a Project Portfolio 3 for Code Institute Full Stack Software Development. This project is a command line application built with Python. 
+Made with passion for anyone interested in space, astronomy and anything related to it. Users test their knowledge of Outer Space by answering 10 random questions.
+
 ![Responsice Mockup](https://res.cloudinary.com/dcydt01ed/image/upload/v1681601846/space_quiz_gehn8l.png)
 Visit the live site [Here](https://space-quiz-pp3.herokuapp.com/)
 
 
 ## Contents
 - [User Experience](#user-experience)
-  - [Site Owner's Goals](#site-owners-goals)
-  - [Users Goals](#users-goals)
+  - [Project Goals](#project-goals)
+  - [User Expectations](#user-expectations)
+  - [Users Stories](#users-stories)
 - [Features](#features)
   - [](#)
   - [](#)
@@ -39,11 +43,29 @@ Visit the live site [Here](https://space-quiz-pp3.herokuapp.com/)
 
 ## User Experience
 
-  ### Site Owner's Goals
-  - 
+  ### Project Goals
+  - Provide the user with a fun, engaging and easy to play multiple choice quiz.
+  - Provide an appropriate response to all user inputs and ensure any invalid data is handled appropriately.
+  - Accurately keep track of and display the user’s score clearly at the end of the quiz.
+  - Keep good UX principles regarding layout/colours/interaction.
+
+  ### User Expectations
+  - Able to quickly understand what the purpose of the site is.
+  - Find info/rules if needed.
+  - Every interaction has feedback.
+  - Get more info about question/answer, right or wrong.
+  - Get name on/see the high scores.
+  - No errors with the game logic.
+
     
-  ### Users Goals
-  - 
+  ### Users Stories
+  - To play a fun and easy to use quiz.
+  - Clear instructions on how to use the quiz.
+  - To test my knowledge of Outer Space.
+  - To be informed when my input is invalid, and to be given the opportunity to correct any invalid input without interrupting the flow of the quiz.
+  - To be able to read the application output clearly.
+  - To see my total score out of ten at the end of the quiz.
+  - To be able to easily repeat the quiz if I want to try again.
   
   [🔼 Back to top](#contents)
 
