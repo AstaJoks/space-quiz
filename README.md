@@ -21,16 +21,16 @@ Visit the live site [Here](https://space-quiz-pp3.herokuapp.com/)
   - [](#)
 - [Design](#design)
   - [Process Flow](#process-flow)
-  - [Colour Pallete](#colour-pallete)
+  - [Colours](#colours)
 - [Technologies](#technologies)
   - [Language](#language)
-  - [Flowchart](#flowchart)
+  - [Frameworks and Programs](#frameworks-and-programs)
 - [Testing](testing)
   - [Functional Testing](#functional-testing)
   - [Manual Testing](#manual-testing)
   - [Lighthouse Testing](#lighthouse-testing)
-  - [Validator Testing](#validator-testing)
-  - [Unfixed Bugs](#unfixed-bugs)
+  - [CI Python Linter](#ci-python-linter)
+  - [Bugs](#bugs)
 - [Deployment](#deployment)
 - [Credits](#credits)
   - [Content](#content)
@@ -104,28 +104,41 @@ Visit the live site [Here](https://space-quiz-pp3.herokuapp.com/)
 
 ## Design
 
+### Colours
+
+  - The colours in the quiz are supplied by the Python Colorama Model
+
 ### Process Flow
 
-- Flowchart to demonstrate the actions that take place while using the app.
+- Flow chart to demonstrate the actions that take place while using the app.
 
 <p><img src="" width="700px" height="auto"  alt="Flowchart"></p>
-
-
-### Colour Pallete
-
-  - 
-
-<p><img src="" width="300px" height="auto"  alt="Colour-pallete"></p>
 
 [🔼 Back to top](#contents)
 
 ## Technologies
 
 #### Language
-  - Python
+  - Python: to develop the program.
 
-#### Flowchart
-  - Flowchart was created using lucidchart from https://www.lucidchart.com/pages/.
+#### Python Modules
+  - [os](https://docs.python.org/3/library/os.html?highlight=os#module-os) - to clear the screen.
+  - [time](https://pypi.org/project/time/) - to add pauses at certain points during the quiz.
+  - [random](https://docs.python.org/3/library/random.html?highlight=random#module-random) - to select the random questions from the data dictionary.
+  - [math](https://docs.python.org/3/library/math.html) - to get 10 random questions out of 20.
+  - [gspread](https://pypi.org/project/gspread/) for tracking users names and scores.
+  - [google.oauth2.service_accoun](https://google-auth.readthedocs.io/en/stable/index.html): credentials used to validate credentials and grant access to Google service accounts
+  - [pyfiglet](https://pypi.org/project/pyfiglet/) for converting regular text in to different forms of ASCII art.
+  - [colorama](https://pypi.org/project/colorama/) for adding a colour to the different parts of quiz.
+
+#### Frameworks and Programs
+
+This Project used:
+
+  - [Git](https://git-scm.com/) for version control.
+  - [GitHub](https://github.com/) to store the project files.
+  - [Heroku](https://www.heroku.com/about) to deploy the website.
+  - [Lucidchart](https://www.lucidchart.com/pages/) to create the flow chart.
 
 [🔼 Back to top](#contents)
 
@@ -133,71 +146,24 @@ Visit the live site [Here](https://space-quiz-pp3.herokuapp.com/)
 
 ### Functional Testing
 
-<table>
-  <tr>
-    <th></th>
-    <th>Test</th>
-    <th>Completed Succsessfully</th>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    </tr>
-    <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    </tr>
-    <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    </tr>
-</table>
 
 ### Manual testing
 
 - Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
 
+
 ### Lighthouse Testing
 
 I generated a lighthouse report to check my performance and the scores are good. The lower score for the SEO is caused by the lack of meta description.
 
-<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681602070/lighthouse_gny4rb.png" width="400px" height="auto"  alt="Lighthouse"></p>
+<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681602070/lighthouse_gny4rb.png" width="600px" height="auto"  alt="Lighthouse"></p>
 
-### Validator Testing 
 
-The [PEP8CI](https://pep8ci.herokuapp.com/) Validator Service was used to validate every Python file in the project to ensure there were no syntax errors in the project.
+### CI Python Linter
+
+No errors or warnings were found during the last testing of the code in [CI Python Linter](https://pep8ci.herokuapp.com/).
 
 <p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681602378/pep8ci_ofpeat.png" width="800px" height="auto"  alt=""></p>
-
-- No errors or warnings were found during the last testing of the code in PEP8CI.
 
 
 ### Bugs
@@ -280,8 +246,8 @@ You can clone the repository by following these steps:
 - [Readme](https://readme.so/)
 - [Simple Multiple Choice Quiz Game in Python](https://www.youtube.com/watch?v=mxDeSkuLBeY&t=372s)
 - [W3Schools - Python](https://www.w3schools.com/python/)
-- [How to clear the console:](https://appdividend.com/2022/06/03/how-to-clear-console-in-python/#:~:text=For%20the%20Windows%20system%2C%20to,('cls'))
-- [How to add Python sleep - for timing the texts:](https://realpython.com/python-sleep/)
+- [How to clear the console](https://appdividend.com/2022/06/03/how-to-clear-console-in-python/#:~:text=For%20the%20Windows%20system%2C%20to,('cls'))
+- [How to add Python sleep - for timing the texts](https://realpython.com/python-sleep/)
 - [Simple quiz plus flowchart Python](https://www.youtube.com/watch?v=LXSvzUimHBk)
 
 
@@ -289,9 +255,8 @@ You can clone the repository by following these steps:
 
 ## Acknowledgments
 
-- My Mentor for continious helpful feedback.
-- I would like to thank the Code Institute tutor team for their assistance with troubleshooting and debugging some project issues.
-- I would like to thank my husband, for believing in me, and for the moral support; it kept me going during periods of self-doubt.
+- Big thank you for my Mentor for continious helpful feedback.
+- I would like to thank my husband, for believing in me, and for the moral support. It kept me going during periods of self-doubt.
 
 
 [🔼 Back to top](#contents)
