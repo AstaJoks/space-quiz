@@ -22,6 +22,7 @@ Visit the live site [Here](https://space-quiz-pp3.herokuapp.com/)
   - [High Score Table](#high-score-table)
   - [Play Again](#play-again)
   - [Results Worksheet](#results-worksheet)
+  - [Storage Data](#storage-data)
   - [Data Model](#data-model)
 - [Design](#design)
   - [Colours](#colours)
@@ -29,7 +30,7 @@ Visit the live site [Here](https://space-quiz-pp3.herokuapp.com/)
   - [Accessibility](accessibility)
 - [Technologies](#technologies)
   - [Language](#language)
-  - [Frameworks and Programs](#frameworks-and-programs)
+  - [Frameworks and Programs used](#frameworks-and-programs-used)
 - [Testing](testing)
   - [Functional Testing](#functional-testing)
   - [Manual Testing](#manual-testing)
@@ -157,10 +158,17 @@ And show the correct answer.
 
 <p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681689734/results_emmnvh.png" width="600px" height="auto"  alt="Results Worksheet"></p>
 
+### Storage Data
+
+ - I have used a Google sheet to save the player's name and score. This sheet is connected to the code through the Google Drive and Google Sheet API by the Google Cloud Platform. This method allows me to send and receive data as I had access to the Google Sheet API credentials. I also added in the Config Vars to these credentials when I was deploying the project in Heroku. As this is sensitive data, I had to add the creds.json in the Git ignore file. This would ensure that these credentials are not pushed to the repository.
+
+<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681757347/storage_data_hmfdiy.png" width="600px" height="auto"  alt="Storage Data"></p>
+
 ### Data Model
 
  - I used a dictionary in this programme to store the question and answer data for the quiz.
- I have written the code in a way that means additional questions can be added to the dictionary in the future, without having to amend any other code. 
+ I have written the code in a way that means additional questions can be added to the dictionary in the future, without having to amend any other code.
+
 
 [🔼 Back to top](#contents)
 
@@ -197,7 +205,7 @@ And show the correct answer.
   - [pyfiglet](https://pypi.org/project/pyfiglet/) for converting regular text in to different forms of ASCII art.
   - [colorama](https://pypi.org/project/colorama/) for adding a colour to the different parts of quiz.
 
-#### Frameworks and Programs
+#### Frameworks and Programs used
 
 This Project used:
 
@@ -211,6 +219,65 @@ This Project used:
 ## Testing 
 
 ### Functional Testing
+
+<table>
+  <tr>
+    <th>Test</th>
+    <th>Completed Succsessfully</th>
+  </tr>
+  <tr>
+    <td>The terminal has no issues and is working properly</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>The input for name has the right behaviour and shows the user an alert if the input is empty</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>The welcome message and game rules appear without any issues after the user submits their name</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>The option to press 'y' to start a game is running well and shows the user an alert if the input is invalid</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>The quiz questions runs without any issues and as expected</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>Correct/Incorrect answer message appears without any issues and shows the user an alert if the input is invalid</td>
+    <td>Yes</td>
+  </tr>
+   <tr>
+    <td>The score appears after correct answer as expected</td>
+    <td>Yes</td>
+  </tr>
+   <tr>
+    <td>The correct answer appears if the user answers incorrectly</td>
+    <td>Yes</td>
+  </tr>
+   <tr>
+    <td>The final score runs without any issues and as expected</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>The score worksheet updating without any issues and as expected</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>The High Score Table shows the five highest scores</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>The option to press 'y' to start a quiz again is running well and shows the user an alert if the input is invalid</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>The quiz restarts at the questions section(not at the intro message) if the user decides to tun it again</td>
+    <td>Yes</td>
+  </tr>
+</table>
 
 
 ### Manual testing
@@ -241,11 +308,11 @@ No errors or warnings were found during the last testing of the code in [CI Pyth
 - Fixed Bug
 
    - I was struggling to get the ten random questions from the data dictionary. Only one random question was showing.
-It took me awhile to figure it out that there was an indentation mistake which wasn't shown in pip8ci.
+It took me awhile to figure it out that there was an indentation mistake which wasn't shown in PIP8CI.
 
 - Known Bugs
 
-   - the emojis (smiley faces after correct/wrong answer in the quiz) don't always render properly for user on Mozilla Firefox . I did not manage to find a solution to fix this.
+   - The emojis (smiley faces after correct/wrong answer in the quiz) don't always render properly for user on Mozilla Firefox . I did not manage to find a solution to fix this.
 
 [🔼 Back to top](#contents)
 
