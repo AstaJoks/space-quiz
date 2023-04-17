@@ -214,7 +214,11 @@ This Project used:
 
 ### Manual testing
 
-- Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
+I have carried out the following manual tests throughout the development process:
+
+  - Given invalid input at each input stage to check invalid data is dealt with in the way I expected.
+  - Tested in my local terminal and the deployed Heroku terminal.
+  - Asked friends and family to play the quiz to check that it works on various browsers and that the quiz functionality is understandable.
 
 
 ### Lighthouse Testing
@@ -235,8 +239,12 @@ No errors or warnings were found during the last testing of the code in [CI Pyth
 
 - Fixed Bug
 
-I was struggling to get the ten random questions from the data dictionary. Only one random question was showing.
+   - I was struggling to get the ten random questions from the data dictionary. Only one random question was showing.
 It took me awhile to figure it out that there was an indentation mistake which wasn't shown in pip8ci.
+
+- Known Bugs
+
+   - the emojis (smiley faces after correct/wrong answer in the quiz) don't always render properly for user on Mozilla Firefox . I did not manage to find a solution to fix this.
 
 [🔼 Back to top](#contents)
 
