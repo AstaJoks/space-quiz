@@ -242,7 +242,7 @@ This Project used:
     <td>Yes</td>
   </tr>
   <tr>
-    <td>The quiz questions runs without any issues and as expected</td>
+    <td>The quiz questions run without any issues and as expected(10 out of 20 questions randomly run when a new quiz starts)</td>
     <td>Yes</td>
   </tr>
   <tr>
@@ -274,7 +274,7 @@ This Project used:
     <td>Yes</td>
   </tr>
   <tr>
-    <td>The quiz restarts at the questions section(not at the intro message) if the user decides to tun it again</td>
+    <td>The quiz restarts at the questions section(not at the intro message) if the user decides to run it again</td>
     <td>Yes</td>
   </tr>
 </table>
