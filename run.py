@@ -163,21 +163,22 @@ def quiz_intro():
     time.sleep(1)
     global NAME
     NAME = input("Please type your name and hit the enter key to start:\n")
+    os.system('cls' if os.name == 'nt' else 'clear')
 
     # Relaunches quiz intro if no name is entered and user only clicks Enter
     if NAME == "":
         print(f"{Fore.RED}A name is required to take the quiz!")
         quiz_intro()
     else:
-        print(f"\nWelcome to the Space Quiz {NAME}.\n")
-        time.sleep(1)
+        print(f"{Fore.CYAN}Welcome to the Space Quiz {NAME}.\n")
+        time.sleep(0.5)
         print("The quiz consists of ten questions to test your knowledge "
               "about the outer space and the solar system.\n")
-        time.sleep(1)
+        time.sleep(1.5)
         print("The questions are in multiple choice format.\n")
-        time.sleep(1)
+        time.sleep(1.5)
         print("Options are a, b or c for all questions.\n")
-        time.sleep(1)
+        time.sleep(1.5)
         print("When prompted, please enter you answer a, b or c and hit the "
               "enter key.\n")
         time.sleep(1.5)
@@ -244,7 +245,7 @@ def run_quiz(data):
             print("🥳..🥳..🥳..🥳..🥳..🥳..🥳..🥳..🥳..🥳..🥳")
             score = score + 1
             print(f"Your score: {score}")
-            time.sleep(2)
+            time.sleep(3.5)
             os.system('cls' if os.name == 'nt' else 'clear')
         # this code displays the correct answer if the user enters
         # the wrong answer
@@ -252,13 +253,13 @@ def run_quiz(data):
             print(f"{Fore.RED}Sorry {NAME}, that's incorrect.\n")
             print("😕..😕..😕..😕..😕..😕..😕..😕..😕..😕..😕")
             print(f"The correct answer was {correct_answer}.")
-            time.sleep(2)
+            time.sleep(3.5)
             os.system('cls' if os.name == 'nt' else 'clear')
 
     # the final screen congratulates the user and tells
     # the final score
     print(f"Well done for completing the Space Quiz, {NAME}.\n")
-    print(f"Your total score was {score} points out of 10.\n")
+    print(f"{Fore.CYAN}Your total score was {score} points out of 10.\n")
     print("Hope you had fun!")
     data = NAME, score
     export_results(data)
@@ -279,7 +280,7 @@ def export_results(data):
     time.sleep(1)
 
     print("Showing the HIGH SCORES...")
-    time.sleep(2)
+    time.sleep(5)
     os.system('cls' if os.name == 'nt' else 'clear')
 
 
