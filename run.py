@@ -338,7 +338,12 @@ def try_again():
         try_again()
 
 
-quiz_intro()
-run_quiz(quiz_data)
-display_high_scores()
-try_again()
+def main_function():
+    '''Main function that controls the flow of the quiz'''
+    quiz_intro()
+    run_quiz(quiz_data)
+    display_high_scores()
+    try_again()
+
+
+main_function()

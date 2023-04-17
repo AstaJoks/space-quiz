@@ -156,7 +156,7 @@ And show the correct answer.
 
   - This Google sheet contains all the users who have completed the quiz along with the score they achieved.
 
-<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681689734/results_emmnvh.png" width="600px" height="auto"  alt="Results Worksheet"></p>
+<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681689734/results_emmnvh.png" width="400px" height="auto"  alt="Results Worksheet"></p>
 
 ### Storage Data
 
