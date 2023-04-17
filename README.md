@@ -3,7 +3,7 @@
 Description
 
 Space Quiz is a Project Portfolio 3 for Code Institute Full Stack Software Development. This project is a command line application built with Python. 
-Made with passion for anyone interested in space, astronomy and anything related to it. Users test their knowledge of Outer Space by answering 10 random questions.
+Made with passion for anyone interested in space, astronomy and anything related to it. Users test their knowledge of Outer Space by answering 10 multiple questions.
 
 ![Responsice Mockup](https://res.cloudinary.com/dcydt01ed/image/upload/v1681601846/space_quiz_gehn8l.png)
 Visit the live site [Here](https://space-quiz-pp3.herokuapp.com/)
@@ -15,17 +15,18 @@ Visit the live site [Here](https://space-quiz-pp3.herokuapp.com/)
   - [User Expectations](#user-expectations)
   - [Users Stories](#users-stories)
 - [Features](#features)
-  - [](#)
-  - [](#)
-  - [](#)
-  - [](#)
-  - [](#)
-  - [](#)
-  - [](#)
-  - [](#)
+  - [Main Page and Intro Message](#main-page-and-intro-message)
+  - [Instructions](#instructions)
+  - [Questions](#questions)
+  - [Final Score](#final-score)
+  - [High Score Table](#high-score-table)
+  - [Play Again](#play-again)
+  - [Results Worksheet](#results-worksheet)
+  - [Data Model](#data-model)
 - [Design](#design)
-  - [Process Flow](#process-flow)
   - [Colours](#colours)
+  - [Process Flow](#process-flow)
+  - [Accessibility](accessibility)
 - [Technologies](#technologies)
   - [Language](#language)
   - [Frameworks and Programs](#frameworks-and-programs)
@@ -45,6 +46,7 @@ Visit the live site [Here](https://space-quiz-pp3.herokuapp.com/)
 
   ### Project Goals
   - Provide the user with a fun, engaging and easy to play multiple choice quiz.
+  - Provide some visuals with the use of ASCII art and colour to contribute to a positive user experience.
   - Provide an appropriate response to all user inputs and ensure any invalid data is handled appropriately.
   - Accurately keep track of and display the user’s score clearly at the end of the quiz.
   - Keep good UX principles regarding layout/colours/interaction.
@@ -57,7 +59,6 @@ Visit the live site [Here](https://space-quiz-pp3.herokuapp.com/)
   - Get name on/see the high scores.
   - No errors with the game logic.
 
-    
   ### Users Stories
   - To play a fun and easy to use quiz.
   - Clear instructions on how to use the quiz.
@@ -71,56 +72,94 @@ Visit the live site [Here](https://space-quiz-pp3.herokuapp.com/)
 
 ## Features 
 
-### 
+### Main Page and Intro Message
+<br/>
 
-  - 
-<p><img src="" width="800px" height="auto"  alt="Nav_bar"></p>
+*Project Goal - Provide some visuals with the use of ASCII art and colour to contribute to a positive user experience.*
 
-### 
+ - As design and layout features in command line applications are restrictive, I decided to use pyfiglet for converting regular text in to different forms
+of ASCII art for LOGO of Space Quiz.
+ - And I have used the Python module 'Colorama' throughout the program to add color within the terminal.
 
-   - 
+<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681683715/main_page_y2mvwl.png" width="800px" height="auto"  alt="Main Page"></p>
 
-<p><img src="" width="800px" height="auto"  alt=""></p>
+### Instructions
+<br/>
 
-### 
+*As a user I want clear instructions on how to use the quiz.*
 
-  - 
+ - Once the user has entered their name, they are given a personalised welcome message, and are presented with a short description and simple instructions for the quiz.
 
-  <p><img src="" width="300px" height="auto"  alt=""></p>
+<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681684462/instructions_l0psxn.png" width="800px" height="auto"  alt="Instructions"></p>
 
+ - The user is then asked if they are ready to play the quiz by typing 'y' for yes or 'n' for no. This allows user initiation and control of the logic flow in this stage of the program.
+ - If the user types 'y' the quiz will begin and if 'n' is typed a message will appear asking them to type 'y' if they ready to begin, else start the quiz another time.
 
-### 
+  <p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681684871/start_quiz_validation_petjem.png" width="800px" height="auto"  alt="Start Quiz Validation"></p>
 
-  - 
-<p><img src="" width="800px" height="auto"  alt=""></p>
+### Questions
+<br/>
 
-### 
+*Project Goal - Provide the user with a fun, engaging and easy to play multiple choice quiz.*
 
-  - 
+ - The quiz contains 10(randomly selected out of 20) multiple choice questions of varying difficulty which are iterated randomly each time the program is run.
+ - Each correctly answered question scores 1 point, and if the question is answered incorrectly then 0 points are awarded.
 
-<p><img src="" width="800px" height="auto"  alt=""></p>
+<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681685843/questions_fnjian.png" width="800px" height="auto"  alt="Questions"></p>
 
-### 
+ - If the correct answer is selected by the user, they are informed with the output 'That's correct! Well done!' which is colored in green, followed by the next question.
 
-  - 
+<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681685717/correct_answer_sfzuyr.png" width="800px" height="auto"  alt="Correct Answer"></p>
 
-<p><img src="" width="800px" height="auto"  alt=""></p>
+ - If an incorrect answer is selected, the output 'Sorry, that's incorrect!' is shown in red.
+And show the correct answer.
 
-### 
+<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681685712/incorrect_answer_ybvyg8.png" width="800px" height="auto"  alt="Incorrect Answer"></p>
 
-  - 
+ - If Incorrect option is selected (not a, b or c) , the output 'Only a, b or c are valid options!'.
 
-<p><img src="" width="800px" height="auto"  alt=""></p>
+<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681686760/correct_answer_validation_g7w01s.png" width="800px" height="auto"  alt="Option Validation"></p>
 
-### 
+### Final Score
+<br>
 
-  - 
+*Project Goal - Accurately keep track of and display the user’s score clearly at the end of the quiz.*
 
-<p><img src="" width="800px" height="auto"  alt=""></p>
+ - Once the user reaches the end of the quiz, he/she is congratulated and told their final score.
 
-### Existing Features
+<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681687421/final_score_q6bex7.png" width="800px" height="auto"  alt="Final Score"></p>
 
-  - 
+### High Score Table
+
+ - Once the results worksheet updated, the app shows the High Score table, which displays name and the five highest scores.
+ - The user is also asked if they would like to play again, by typing 'y' for yes or 'n' for no.
+
+<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681687989/high_score_table_dfhsrb.png" width="800px" height="auto"  alt="High Score Table"></p>
+
+### Play Again
+
+ - A message appears informing them that the results worksheet is being updated and the user will be able to see the High Score Table.
+ - If 'y' is typed the quiz starts again.
+
+<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681688541/try_again_algrem.png" width="800px" height="auto"  alt="Try again Yes"></p>
+
+ - If 'n' is typed, a message thanks the user for playing and informs that the quiz has ended.
+
+<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681688993/no_xdd14o.png" width="800px" height="auto"  alt="Try again No"></p>
+
+- If invalid option is typed, a message appears informing that only Y/N options are valid.
+
+<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681688999/yes_no_gj94js.png" width="800px" height="auto"  alt="Invalid option"></p>
+
+### Results Worksheet
+
+  - This Google sheet contains all the users who have completed the quiz along with the score they achieved.
+
+<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681689734/results_emmnvh.png" width="600px" height="auto"  alt="Results Worksheet"></p>
+
+### Data Model
+
+ - I used a dictionary in this programme to store the question and answer data for the quiz. I have written the code in a way that means additional questions can be added to the dictionary in the future, without having to amend any other code. This has been achieved through the use of f-Strings in print statements, so that accurate data is always displayed for the user score and total number of questions in the dictionary.
 
 [🔼 Back to top](#contents)
 
@@ -128,13 +167,17 @@ Visit the live site [Here](https://space-quiz-pp3.herokuapp.com/)
 
 ### Colours
 
-  - The colours in the quiz are supplied by the Python Colorama Model
+  - The colours in the quiz are supplied by the Python Colorama Model.
 
 ### Process Flow
 
 - Flow chart to demonstrate the actions that take place while using the app.
 
-<p><img src="" width="700px" height="auto"  alt="Flowchart"></p>
+<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681681888/SpaceQuiz_Flowchart_1_oqfttc.png" width="1000px" height="auto"  alt="Flowchart"></p>
+
+ ### Accessibility
+
+ - The app provides feedback to the user at various stages to instruct them if they have made an error, for example, if they do not enter a name at the beginning, they are instructed to enter a name to proceed.
 
 [🔼 Back to top](#contents)
 
