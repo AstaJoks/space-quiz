@@ -157,7 +157,7 @@ def quiz_intro():
     """
 
     ascii_banner = pyfiglet.figlet_format("Space Quiz")
-    print(Fore.BLUE + ascii_banner)
+    print(Fore.CYAN + ascii_banner)
 
     print("WOULD YOU LIKE TO TEST YOUR KNOWLEDGE ABOUT THE OUTER SPACE?")
     time.sleep(1)
@@ -191,7 +191,7 @@ def quiz_intro():
                            "complete the quiz another time: ")
 
     if begin_quiz.lower() == "y":
-        print(f"{Fore.BLUE}\nOkay, let's start. Good luck!\n")
+        print(f"{Fore.CYAN}\nOkay, let's start. Good luck!\n")
         time.sleep(1.5)
         os.system('cls' if os.name == 'nt' else 'clear')
 
@@ -225,7 +225,7 @@ def run_quiz(data):
         # this loop repeats the question until the user enters
         # either a, b or c
         while user_answer not in ['a', 'b', 'c']:
-            print(f"{Fore.BLUE}{entry['question']}")
+            print(f"{Fore.CYAN}{entry['question']}")
 
             # this code prints the 3 options for each question
             for key, value in entry['answers'].items():
@@ -306,7 +306,7 @@ def display_high_scores():
 
     update_data = sorted(score_sheet, key=lambda x: int(x[1]), reverse=True)
 
-    print(f"{Fore.BLUE}{game_high_scores[0]}")
+    print(f"{Fore.CYAN}{game_high_scores[0]}")
     if len(update_data) < 5:
         count = len(update_data)
     else:
@@ -315,7 +315,7 @@ def display_high_scores():
     for i in range(0, count):
         print(f"""
         {i+1}\t{update_data[i][0]}\t  {update_data[i][1]}""")
-    print(f"""{Fore.BLUE}\n
+    print(f"""{Fore.CYAN}\n
     =====✴=====✴=====✴=====✴=====✴=====✴=====✴=====""")
 
 
