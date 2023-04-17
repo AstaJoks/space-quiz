@@ -126,6 +126,7 @@ And show the correct answer.
 *Project Goal - Accurately keep track of and display the user’s score clearly at the end of the quiz.*
 
  - Once the user reaches the end of the quiz, he/she is congratulated and told their final score.
+ - A message appears informing them that the results worksheet is being updated and the user will be able to see the High Score Table
 
 <p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681687421/final_score_q6bex7.png" width="800px" height="auto"  alt="Final Score"></p>
 
@@ -138,8 +139,7 @@ And show the correct answer.
 
 ### Play Again
 
- - A message appears informing them that the results worksheet is being updated and the user will be able to see the High Score Table.
- - If 'y' is typed the quiz starts again.
+ - If the user type 'y' the quiz starts again.
 
 <p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681688541/try_again_algrem.png" width="800px" height="auto"  alt="Try again Yes"></p>
 
@@ -159,7 +159,8 @@ And show the correct answer.
 
 ### Data Model
 
- - I used a dictionary in this programme to store the question and answer data for the quiz. I have written the code in a way that means additional questions can be added to the dictionary in the future, without having to amend any other code. This has been achieved through the use of f-Strings in print statements, so that accurate data is always displayed for the user score and total number of questions in the dictionary.
+ - I used a dictionary in this programme to store the question and answer data for the quiz.
+ I have written the code in a way that means additional questions can be added to the dictionary in the future, without having to amend any other code. 
 
 [🔼 Back to top](#contents)
 
