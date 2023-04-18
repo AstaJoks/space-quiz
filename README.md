@@ -230,6 +230,10 @@ This Project used:
     <td>Yes</td>
   </tr>
   <tr>
+    <td>All input will be accepted in lower or upper case. For example if the user selects answer 'a' with an uppercase 'A', this input will still be accepted by the programme as valid</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
     <td>The input for name has the right behaviour and shows the user an alert if the input is empty</td>
     <td>Yes</td>
   </tr>
