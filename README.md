@@ -5,7 +5,7 @@ Description
 Space Quiz is a Project Portfolio 3 for Code Institute Full Stack Software Development. This project is a command line application built with Python. 
 Made with passion for anyone interested in space, astronomy and anything related to it. Users test their knowledge of Outer Space by answering 10 multiple questions.
 
-![Responsice Mockup](https://res.cloudinary.com/dcydt01ed/image/upload/v1681601846/space_quiz_gehn8l.png)
+![Responsice Mockup](https://res.cloudinary.com/dcydt01ed/image/upload/v1681847214/space_quiz_de57ol.png)
 Visit the live site [Here](https://space-quiz-pp3.herokuapp.com/)
 
 
@@ -74,83 +74,77 @@ Visit the live site [Here](https://space-quiz-pp3.herokuapp.com/)
 ## Features 
 
 ### Main Page and Intro Message
-<br/>
-
-*Project Goal - Provide some visuals with the use of ASCII art and colour to contribute to a positive user experience.*
 
  - As design and layout features in command line applications are restrictive, I decided to use pyfiglet for converting regular text in to different forms
 of ASCII art for LOGO of Space Quiz.
  - And I have used the Python module 'Colorama' throughout the program to add color within the terminal.
 
-<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681683715/main_page_y2mvwl.png" width="800px" height="auto"  alt="Main Page"></p>
+<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681847214/space_quiz_de57ol.png" width="800px" height="auto"  alt="Main Page"></p>
+
+ - After the intro message user is asked to enter the name for starting the quiz.
+ - If the user won't type the name and press enter, message will appear 'A name is requires to take a quiz'.
+
+ <p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681847454/no_name_fsh72r.png" width="800px" height="auto"  alt="User name"></p>
 
 ### Instructions
-<br/>
-
-*As a user I want clear instructions on how to use the quiz.*
 
  - Once the user has entered their name, they are given a personalised welcome message, and are presented with a short description and simple instructions for the quiz.
 
-<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681684462/instructions_l0psxn.png" width="800px" height="auto"  alt="Instructions"></p>
+<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681848079/rules_fs0up2.png" width="800px" height="auto"  alt="Instructions"></p>
 
  - The user is then asked if they are ready to play the quiz by typing 'y' for yes or 'n' for no. This allows user initiation and control of the logic flow in this stage of the program.
  - If the user types 'y' the quiz will begin and if 'n' is typed a message will appear asking them to type 'y' if they ready to begin, else start the quiz another time.
 
-  <p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681684871/start_quiz_validation_petjem.png" width="800px" height="auto"  alt="Start Quiz Validation"></p>
+  <p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681848237/name_validation_ld5lnr.png" width="800px" height="auto"  alt="Start Quiz Validation"></p>
 
 ### Questions
-<br/>
-
-*Project Goal - Provide the user with a fun, engaging and easy to play multiple choice quiz.*
 
  - The quiz contains 10(randomly selected out of 20) multiple choice questions of varying difficulty which are iterated randomly each time the program is run.
  - Each correctly answered question scores 1 point, and if the question is answered incorrectly then 0 points are awarded.
 
-<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681685843/questions_fnjian.png" width="800px" height="auto"  alt="Questions"></p>
+<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681849411/questions_b39l0d.png" width="800px" height="auto"  alt="Questions"></p>
 
  - If the correct answer is selected by the user, they are informed with the output 'That's correct! Well done!' which is colored in green, followed by the next question.
-
-<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681685717/correct_answer_sfzuyr.png" width="800px" height="auto"  alt="Correct Answer"></p>
+ - The 
+ - The score is shown if the user answers correctly.
+<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681849703/correct_answer_aamvbq.png" width="800px" height="auto"  alt="Correct Answer"></p>
 
  - If an incorrect answer is selected, the output 'Sorry, that's incorrect!' is shown in red.
-And show the correct answer.
+ - Correct answer is shown if user answers incorrectly.
 
-<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681685712/incorrect_answer_ybvyg8.png" width="800px" height="auto"  alt="Incorrect Answer"></p>
+<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681849704/incorrect_answer_kzpv8y.png" width="800px" height="auto"  alt="Incorrect Answer"></p>
 
  - If Incorrect option is selected (not a, b or c) , the output 'Only a, b or c are valid options!'.
 
-<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681686760/correct_answer_validation_g7w01s.png" width="800px" height="auto"  alt="Option Validation"></p>
+<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681850706/question_invalid_input_vsl4sl.png" width="800px" height="auto"  alt="Option Validation"></p>
 
 ### Final Score
-<br>
-
-*Project Goal - Accurately keep track of and display the user’s score clearly at the end of the quiz.*
 
  - Once the user reaches the end of the quiz, he/she is congratulated and told their final score.
  - A message appears informing them that the results worksheet is being updated and the user will be able to see the High Score Table
 
-<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681687421/final_score_q6bex7.png" width="800px" height="auto"  alt="Final Score"></p>
+<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681850924/total_score_tmhuqj.png" width="800px" height="auto"  alt="Final Score"></p>
 
 ### High Score Table
 
  - Once the results worksheet updated, the app shows the High Score table, which displays name and the five highest scores.
  - The user is also asked if they would like to play again, by typing 'y' for yes or 'n' for no.
 
-<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681687989/high_score_table_dfhsrb.png" width="800px" height="auto"  alt="High Score Table"></p>
+<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681851197/high_score_table_jwizhu.png" width="800px" height="auto"  alt="High Score Table"></p>
 
 ### Play Again
 
  - If the user type 'y' the quiz starts again.
 
-<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681688541/try_again_algrem.png" width="800px" height="auto"  alt="Try again Yes"></p>
+<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681851585/try_again_th6xoz.png" width="800px" height="auto"  alt="Try again Yes"></p>
 
  - If 'n' is typed, a message thanks the user for playing and informs that the quiz has ended.
 
-<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681688993/no_xdd14o.png" width="800px" height="auto"  alt="Try again No"></p>
+<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681851576/try_again_no_o4tnra.png" width="800px" height="auto"  alt="Try again No"></p>
 
 - If invalid option is typed, a message appears informing that only Y/N options are valid.
 
-<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681688999/yes_no_gj94js.png" width="800px" height="auto"  alt="Invalid option"></p>
+<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681851187/try_again_invalid_option_xozi3n.png" width="800px" height="auto"  alt="Invalid option"></p>
 
 ### Results Worksheet
 
@@ -396,6 +390,8 @@ You can clone the repository by following these steps:
 - [How to clear the console](https://appdividend.com/2022/06/03/how-to-clear-console-in-python/#:~:text=For%20the%20Windows%20system%2C%20to,('cls'))
 - [How to add Python sleep - for timing the texts](https://realpython.com/python-sleep/)
 - [Simple quiz plus flowchart Python](https://www.youtube.com/watch?v=LXSvzUimHBk)
+- [Emoji List](https://smiley.cool/emoji-list.php) - Emoji faces for correct/Incorrect Answers
+- [Quiz Questions](https://icebreakerideas.com/space-trivia/) - Space Quiz questions and answers taken from Space Trivia
 
 
 [🔼 Back to top](#contents)
