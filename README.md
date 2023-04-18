@@ -184,11 +184,11 @@ And show the correct answer.
 
    - Part 1 of 2 - Run Program
 
-<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681819547/SpaceQuiz_Flowchart_part_1_of_2_ys2leq.png" width="1000px" height="auto"  alt="Flowchart part 1 of 2"></p>
+<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681820464/1_of_2_d3azuz.png" width="800px" height="auto"  alt="Flowchart part 1 of 2"></p>
 
   - Part 2 of 2 -  Quiz Begins
 
-  <p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681819552/part_2_of_qgv0wb.png" width="1000px" height="auto"  alt="Flowchart part 2 of 2"></p>
+  <p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681820468/2_of_2_rp0bmr.png" width="800px" height="auto"  alt="Flowchart part 2 of 2"></p>
 
  ### Accessibility
 
