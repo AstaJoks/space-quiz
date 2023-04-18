@@ -105,12 +105,12 @@ of ASCII art for LOGO of Space Quiz.
 <p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681849411/questions_b39l0d.png" width="800px" height="auto"  alt="Questions"></p>
 
  - If the correct answer is selected by the user, they are informed with the output 'That's correct! Well done!' which is colored in green, followed by the next question.
- - The 
- - The score is shown if the user answers correctly.
+ - The celebrating emoji faces and the score are shown if the user answers correctly.
+
 <p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681849703/correct_answer_aamvbq.png" width="800px" height="auto"  alt="Correct Answer"></p>
 
  - If an incorrect answer is selected, the output 'Sorry, that's incorrect!' is shown in red.
- - Correct answer is shown if user answers incorrectly.
+ - The sad emoji faces and correct answer are shown if user answers incorrectly.
 
 <p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681849704/incorrect_answer_kzpv8y.png" width="800px" height="auto"  alt="Incorrect Answer"></p>
 
