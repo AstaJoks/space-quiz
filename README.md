@@ -104,15 +104,17 @@ of ASCII art for LOGO of Space Quiz.
 
 <p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681849411/questions_b39l0d.png" width="800px" height="auto"  alt="Questions"></p>
 
- - If the correct answer is selected by the user, they are informed with the output 'That's correct! Well done!' which is colored in green, followed by the next question.
+ - If the correct answer is selected by the user, they are informed with the output 'That's correct! Well done!' which is colored in green.
  - The celebrating emoji faces and the score are shown if the user answers correctly.
+ - Press Enter is required to move on to the next question.
 
-<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681849703/correct_answer_aamvbq.png" width="800px" height="auto"  alt="Correct Answer"></p>
+<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681946701/correct_answer_hpgydh.png" width="800px" height="auto"  alt="Correct Answer"></p>
 
  - If an incorrect answer is selected, the output 'Sorry, that's incorrect!' is shown in red.
  - The sad emoji faces and correct answer are shown if user answers incorrectly.
+ - Press Enter is required to move on to the next question.
 
-<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681849704/incorrect_answer_kzpv8y.png" width="800px" height="auto"  alt="Incorrect Answer"></p>
+<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681946701/correct_answer_hpgydh.png" width="800px" height="auto"  alt="Incorrect Answer"></p>
 
  - If Incorrect option is selected (not a, b or c) , the output 'Only a, b or c are valid options!'.
 
@@ -120,10 +122,11 @@ of ASCII art for LOGO of Space Quiz.
 
 ### Final Score
 
- - Once the user reaches the end of the quiz, he/she is congratulated and told their final score.
- - A message appears informing them that the results worksheet is being updated and the user will be able to see the High Score Table
+ - Once the user reaches the end of the quiz, they are congratulated and informed about their final score.
+ - A message appears informing them that the results worksheet is being updated.
+ - Press Enter is required to see the High Score Table.
 
-<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681850924/total_score_tmhuqj.png" width="800px" height="auto"  alt="Final Score"></p>
+<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681947341/total_score_pgyyyz.png" width="800px" height="auto"  alt="Final Score"></p>
 
 ### High Score Table
 
@@ -136,7 +139,7 @@ of ASCII art for LOGO of Space Quiz.
 
  - If the user type 'y' the quiz starts again.
 
-<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681851585/try_again_th6xoz.png" width="800px" height="auto"  alt="Try again Yes"></p>
+<p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681947579/try_again_yfajqx.png" width="800px" height="auto"  alt="Try again Yes"></p>
 
  - If 'n' is typed, a message thanks the user for playing and informs that the quiz has ended.
 
