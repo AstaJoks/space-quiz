@@ -314,6 +314,8 @@ No errors or warnings were found during the last testing of the code in [CI Pyth
    - I was struggling to get the ten random questions from the data dictionary. Only one random question was showing.
 It took me awhile to figure it out that there was an indentation mistake which wasn't shown in PIP8CI.
 
+   - 
+
 - Known Bugs
 
    - The emojis (smiley faces after correct/wrong answer in the quiz) don't always render properly for user on Mozilla Firefox . I did not manage to find a solution to fix this.

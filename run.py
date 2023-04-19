@@ -184,7 +184,6 @@ def quiz_intro():
         quiz_intro()
     else:
         print(f"{Fore.CYAN}Welcome to the Space Quiz {NAME}.\n")
-        time.sleep(0.5)
         print("The quiz consists of ten questions to test your knowledge "
               "about the outer space and the solar system.\n")
         time.sleep(1)
@@ -258,7 +257,8 @@ def run_quiz(data):
             print("🥳..🥳..🥳..🥳..🥳..🥳..🥳..🥳..🥳..🥳..🥳")
             score = score + 1
             print(f"Your score: {score}")
-            time.sleep(3.5)
+            input(f"{Fore.CYAN}PLEASE PRESS ENTER TO MOVE ON TO THE NEXT "
+                  "QUESTION.\n")
             clear()
         # this code displays the correct answer if the user enters
         # the wrong answer
@@ -266,13 +266,14 @@ def run_quiz(data):
             print(f"{Fore.RED}Sorry {NAME}, that's incorrect.\n")
             print("😕..😕..😕..😕..😕..😕..😕..😕..😕..😕..😕")
             print(f"The correct answer was {correct_answer}.")
-            time.sleep(3.5)
+            input(f"\n{Fore.CYAN}PLEASE PRESS ENTER TO MOVE ON TO THE NEXT "
+                  "QUESTION.\n")
             clear()
 
     # the final screen congratulates the user and tells
     # the final score
-    print(f"Well done for completing the Space Quiz, {NAME}.\n")
-    print(f"{Fore.CYAN}Your total score was {score} points out of 10.\n")
+    print(f"\nWell done for completing the Space Quiz, {NAME}.\n")
+    print(f"\n{Fore.CYAN}Your total score was {score} points out of 10.\n")
     print("Hope you had fun!")
     data = NAME, score
     export_results(data)
@@ -292,8 +293,7 @@ def export_results(data):
     print("Results exported to worksheet successfully")
     time.sleep(1)
 
-    print("Showing the HIGH SCORES...")
-    time.sleep(5)
+    input(f"{Fore.CYAN}PRESS ENTER TO SEE THE HIGH SCORE TABLE.\n")
     clear()
 
 
@@ -341,9 +341,9 @@ def try_again():
     restart = input("Would you like to try again and beat your score? (Y/N)\n")
     if restart.upper() == "Y":
         clear()
-        print("Okay, let's try again! Good luck!")
+        print(f"{Fore.CYAN}Okay, let's try again! Good luck!")
         time.sleep(1.5)
-        os.system('cls' if os.name == 'nt' else 'clear')
+        clear()
         run_quiz(quiz_data)
     if restart.upper() == "N":
         print("Thank you for taking a quiz. Hope to see you again soon.\n")
