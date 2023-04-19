@@ -150,6 +150,19 @@ quiz_data = [
 ]
 
 
+def clear():
+    """
+    Function to clear the terminal on windows, mac and
+    linux for a better user experience.
+    """
+    # for windows
+    if os.name == 'nt':
+        os.system('cls')
+    # for mac and linux(here, os.name is 'posix')
+    else:
+        os.system('clear')
+
+
 def quiz_intro():
     """
     Quiz intro displays ASCII title text. Gets
@@ -163,7 +176,7 @@ def quiz_intro():
     time.sleep(1)
     global NAME
     NAME = input("Please type your name and hit the enter key to start:\n")
-    os.system('cls' if os.name == 'nt' else 'clear')
+    clear()
 
     # Relaunches quiz intro if no name is entered and user only clicks Enter
     if NAME == "":
@@ -174,14 +187,14 @@ def quiz_intro():
         time.sleep(0.5)
         print("The quiz consists of ten questions to test your knowledge "
               "about the outer space and the solar system.\n")
-        time.sleep(1.5)
+        time.sleep(1)
         print("The questions are in multiple choice format.\n")
-        time.sleep(1.5)
+        time.sleep(1)
         print("Options are a, b or c for all questions.\n")
-        time.sleep(1.5)
+        time.sleep(1)
         print("When prompted, please enter you answer a, b or c and hit the "
               "enter key.\n")
-        time.sleep(1.5)
+        time.sleep(1)
 
     # Asks user if they'd like to begin the quiz pulling in the name they have
     # entered above
@@ -194,7 +207,7 @@ def quiz_intro():
     if begin_quiz.lower() == "y":
         print(f"{Fore.CYAN}\nOkay, let's start. Good luck!\n")
         time.sleep(1.5)
-        os.system('cls' if os.name == 'nt' else 'clear')
+        clear()
 
 
 # run_quiz function based on project by Leah Fisher
@@ -246,7 +259,7 @@ def run_quiz(data):
             score = score + 1
             print(f"Your score: {score}")
             time.sleep(3.5)
-            os.system('cls' if os.name == 'nt' else 'clear')
+            clear()
         # this code displays the correct answer if the user enters
         # the wrong answer
         elif user_answer != entry['correct_answer']:
@@ -254,7 +267,7 @@ def run_quiz(data):
             print("😕..😕..😕..😕..😕..😕..😕..😕..😕..😕..😕")
             print(f"The correct answer was {correct_answer}.")
             time.sleep(3.5)
-            os.system('cls' if os.name == 'nt' else 'clear')
+            clear()
 
     # the final screen congratulates the user and tells
     # the final score
@@ -281,7 +294,7 @@ def export_results(data):
 
     print("Showing the HIGH SCORES...")
     time.sleep(5)
-    os.system('cls' if os.name == 'nt' else 'clear')
+    clear()
 
 
 game_high_scores = [
@@ -327,7 +340,7 @@ def try_again():
 
     restart = input("Would you like to try again and beat your score? (Y/N)\n")
     if restart.upper() == "Y":
-        os.system('cls' if os.name == 'nt' else 'clear')
+        clear()
         print("Okay, let's try again! Good luck!")
         time.sleep(1.5)
         os.system('cls' if os.name == 'nt' else 'clear')
@@ -341,6 +354,7 @@ def try_again():
 
 def main_function():
     '''Main function that controls the flow of the quiz'''
+    clear()
     quiz_intro()
     run_quiz(quiz_data)
     display_high_scores()
