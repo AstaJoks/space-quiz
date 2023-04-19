@@ -185,7 +185,7 @@ of ASCII art for LOGO of Space Quiz.
 
   - Part 2 of 2 -  Quiz Begins
 
-  <p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681820468/2_of_2_rp0bmr.png" width="800px" height="auto"  alt="Flowchart part 2 of 2"></p>
+  <p><img src="https://res.cloudinary.com/dcydt01ed/image/upload/v1681948335/Blank_diagram_2_k0ez1e.png" width="800px" height="auto"  alt="Flowchart part 2 of 2"></p>
 
  ### Accessibility
 
@@ -233,7 +233,7 @@ This Project used:
     <td>Yes</td>
   </tr>
   <tr>
-    <td>All input will be accepted in lower or upper case. For example if the user selects answer 'a' with an uppercase 'A', this input will still be accepted by the programme as valid</td>
+    <td>All inputs are accepted in lower or upper case. For example if the user selects answer 'a' with an uppercase 'A', this input will still be accepted by the programme as valid</td>
     <td>Yes</td>
   </tr>
   <tr>
@@ -265,11 +265,19 @@ This Project used:
     <td>Yes</td>
   </tr>
    <tr>
+    <td>The new question runs when the user press Enter</td>
+    <td>Yes</td>
+  </tr>
+   <tr>
     <td>The final score runs without any issues and as expected</td>
     <td>Yes</td>
   </tr>
   <tr>
     <td>The score worksheet updating without any issues and as expected</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>The High Score Table runs when the user press Enter</td>
     <td>Yes</td>
   </tr>
   <tr>
