@@ -66,7 +66,7 @@ Visit the live site [Here](https://space-quiz-pp3.herokuapp.com/)
   - To test my knowledge of Outer Space.
   - To be informed when my input is invalid, and to be given the opportunity to correct any invalid input without interrupting the flow of the quiz.
   - To be able to read the application output clearly.
-  - To see my total score out of ten at the end of the quiz.
+  - To see my total score out of 10 at the end of the quiz.
   - To be able to easily repeat the quiz if I want to try again.
   
   [🔼 Back to top](#contents)
@@ -320,14 +320,19 @@ No errors or warnings were found during the last testing of the code in [CI Pyth
 
 ### Bugs
 
-- Fixed Bug
+- Fixed Bugs
 
-   - I was struggling to get the ten random questions from the data dictionary. Only one random question was showing.
+   - I was struggling to get the 10 random questions from the data dictionary. Only one random question was showing.
 It took me awhile to figure it out that there was an indentation mistake which wasn't shown in PIP8CI.
 
-   - 
-
+   - There was a problem with the time module in the questions and the High score Table areas. If any keys were pressed while time.sleep has paused the flow, 
+   then those enters were counted towards the input in the while loop. Those results in prompt were being printed several times and caused me a big issue
+   (the questions were answered without the user even saw them). I tryed to temporarily disable the keyboard inputs using various methods(as per [stackoverflow.com](https://stackoverflow.com/questions/29289945/how-to-temporarily-disable-keyboard-input-using-python)), but none of them worked for me. So I decided to change the time.sleep to Input 'Press the Enter...' and that solved my problem.
+   
 - Known Bugs
+
+   - Time module is still active in my project, but it does not cause big issue because the time.pause is very short between the flows(I had longer pauses in the question area)
+   However if the user will be quickly typing, that might affect the quiz flow.
 
    - The emojis (smiley faces after correct/wrong answer in the quiz) don't always render properly for user on Mozilla Firefox . I did not manage to find a solution to fix this.
 
